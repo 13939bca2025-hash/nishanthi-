@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EduGenie - AI Learning Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>EduGenie</h1>
+      <p>Google Gemini Powered Learning Assistant</p>
+    </div>
+    <span id="status" class="status">Checking API...</span>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Ask EduGenie</h2>
+      <div class="grid">
+        <label>Task
+          <select id="task">
+            <option value="answer">Answer Question</option>
+            <option value="explain">Explain Topic</option>
+            <option value="summary">Create Summary</option>
+            <option value="notes">Create Study Notes</option>
+            <option value="quiz">Generate Quiz</option>
+            <option value="exam">Exam Preparation</option>
+          </select>
+        </label>
+        <label>Subject
+          <input id="subject" placeholder="e.g. Data Structures">
+        </label>
+        <label>Difficulty
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+      </div>
+
+      <label>Question / Topic
+        <textarea id="prompt" rows="7" placeholder="Example: Explain stacks and queues in simple words."></textarea>
+      </label>
+      <button id="ask">Ask EduGenie</button>
+      <p id="error" class="error"></p>
+    </section>
+
+    <section class="card">
+      <h2>AI Response</h2>
+      <div id="answer" class="answer">Your response will appear here.</div>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
